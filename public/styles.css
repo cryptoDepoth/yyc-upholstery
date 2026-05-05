@@ -1,0 +1,364 @@
+/* ============================================================
+   YYC UPHOLSTERY — COMPLETE DESIGN SYSTEM
+   Extracted from design system + enhanced for production
+   ============================================================ */
+
+/* =====================================================
+   YYC Upholstery — Design Tokens
+   Colors, type, spacing, radii, shadows.
+   Import this in any HTML/JSX surface to inherit the brand.
+   ===================================================== */
+
+:root {
+  /* ---------- BRAND COLORS ---------- */
+  /* Primary: Royal Blue — trust, professionalism */
+  --blue-50:  #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;   /* PRIMARY */
+  --blue-700: #1d4ed8;   /* PRIMARY-DARK (gradient end) */
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+
+  /* Secondary: Orange — energy, action, warmth */
+  --orange-50:  #fff7ed;
+  --orange-100: #ffedd5;
+  --orange-200: #fed7aa;
+  --orange-300: #fdba74;
+  --orange-400: #fb923c;
+  --orange-500: #f97316;  /* SECONDARY */
+  --orange-600: #ea580c;
+  --orange-700: #c2410c;
+
+  /* Accent: Soft Yellow — callouts, gentle highlights */
+  --yellow-callout: #fffbec;
+  --yellow-border:  #fde68a;
+
+  /* Neutrals */
+  --white:    #ffffff;
+  --gray-50:  #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --text:     #333333;   /* canonical body text */
+
+  /* Semantic */
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --danger:  #dc2626;
+
+  /* ---------- SEMANTIC TOKENS ---------- */
+  --color-bg:           var(--white);
+  --color-bg-subtle:    var(--gray-50);
+  --color-bg-callout:   var(--yellow-callout);
+  --color-fg:           var(--text);
+  --color-fg-muted:     var(--gray-500);
+  --color-fg-subtle:    var(--gray-400);
+  --color-border:       var(--gray-200);
+  --color-border-strong:var(--gray-300);
+
+  --color-primary:        var(--blue-600);
+  --color-primary-hover:  var(--blue-700);
+  --color-primary-on:     var(--white);
+
+  --color-accent:         var(--orange-500);
+  --color-accent-hover:   var(--orange-600);
+  --color-accent-on:      var(--white);
+
+  --color-link:         var(--orange-500);
+  --color-link-hover:   var(--orange-600);
+
+  /* Hero gradient — used on almost every page */
+  --gradient-hero: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  --gradient-hero-deep: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+
+  /* ---------- TYPOGRAPHY ---------- */
+  /* System UI stack — fast, native-feeling, zero font load.
+     Inter is loaded as a *progressive enhancement* webfont. */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Fluid type scale — base 16px, responsive via clamp() */
+  --fs-xs:   0.75rem;    /* 12 */
+  --fs-sm:   0.875rem;   /* 14 */
+  --fs-base: 1rem;       /* 16 — body */
+  --fs-md:   1.125rem;   /* 18 — lead body */
+  --fs-lg:   1.25rem;    /* 20 — small heading */
+  --fs-xl:   clamp(1.375rem, 1.2rem + 0.7vw, 1.625rem);  /* h3 */
+  --fs-2xl:  clamp(1.625rem, 1.4rem + 1.2vw, 2.125rem);  /* h2 */
+  --fs-3xl:  clamp(2rem,    1.6rem + 2vw,   2.75rem);    /* h1 desktop */
+  --fs-4xl:  clamp(2.25rem, 1.8rem + 2.4vw, 3.25rem);    /* hero */
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semibold: 600;
+  --fw-bold:    700;
+
+  --lh-tight:    1.2;
+  --lh-snug:     1.35;
+  --lh-normal:   1.6;   /* body — per spec */
+  --lh-relaxed:  1.75;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+
+  /* ---------- SPACING (4px scale) ---------- */
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  20px;
+  --s-6:  24px;
+  --s-8:  32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+
+  /* ---------- RADII ---------- */
+  --r-sm:   4px;
+  --r-md:   8px;     /* default — buttons, inputs */
+  --r-lg:   12px;
+  --r-xl:   16px;    /* hero card */
+  --r-2xl:  24px;
+  --r-full: 999px;   /* pill */
+
+  /* ---------- SHADOWS ---------- */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08), 0 2px 4px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 28px rgba(15, 23, 42, 0.10), 0 4px 8px rgba(15, 23, 42, 0.04);
+  --shadow-blue: 0 8px 24px rgba(37, 99, 235, 0.18);    /* CTA glow */
+  --shadow-orange: 0 8px 24px rgba(249, 115, 22, 0.20); /* CTA glow */
+
+  /* ---------- LAYOUT ---------- */
+  --container-narrow: 720px;
+  --container:        900px;   /* per existing site */
+  --container-wide:   1120px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 320ms;
+}
+
+/* ---------- BASE ELEMENT STYLES ---------- */
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--color-fg);
+  background: var(--color-bg);
+  font-weight: var(--fw-regular);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: var(--fs-3xl);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-primary);
+}
+h2 {
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-snug);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-accent);
+}
+h3 {
+  font-size: var(--fs-xl);
+  line-height: var(--lh-snug);
+  font-weight: var(--fw-semibold);
+  color: var(--color-primary);
+}
+h4 {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-snug);
+  font-weight: var(--fw-semibold);
+  color: var(--color-fg);
+}
+p { margin: 0 0 1em; text-wrap: pretty; }
+small { font-size: var(--fs-sm); color: var(--color-fg-muted); }
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: var(--fw-semibold);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+a:hover { color: var(--color-link-hover); text-decoration: underline; }
+
+code, kbd, samp { font-family: var(--font-mono); font-size: 0.95em; }
+
+/* Eyebrow / label */
+.eyebrow {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+
+/* ===== HERO ===== */
+body{margin:0;padding:24px;background:#fff;font-family:Inter,system-ui;color:#333}
+.hero{background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);color:#fff;border-radius:16px;padding:48px 36px;text-align:center}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fdba74;margin-bottom:14px}
+.hero h1{font-size:38px;font-weight:800;margin:0 0 12px;line-height:1.1;letter-spacing:-.02em;color:#fff}
+.hero p{font-size:17px;opacity:.92;max-width:540px;margin:0 auto 24px;line-height:1.5}
+.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;transition:all .2s}
+.btn svg{width:18px;height:18px}
+.btn-orange{background:#f97316;color:#fff}
+.btn-orange:hover{background:#ea580c}
+.btn-white{background:#fff;color:#2563eb}
+.trust{display:flex;justify-content:center;gap:24px;margin-top:28px;font-size:13px;opacity:.85;flex-wrap:wrap}
+.trust span{display:inline-flex;align-items:center;gap:6px}
+.trust svg{width:16px;height:16px}
+
+/* ===== SERVICE CARDS ===== */
+body{margin:0;padding:28px;background:#f9fafb;font-family:Inter,system-ui;color:#333}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:24px;box-shadow:0 1px 3px rgba(15,23,42,.08),0 1px 2px rgba(15,23,42,.04);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(15,23,42,.10)}
+.icon{width:44px;height:44px;border-radius:10px;background:#eff6ff;color:#2563eb;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.icon svg{width:24px;height:24px}
+.card h3{font-size:18px;font-weight:700;margin:0 0 6px;color:#111827;letter-spacing:-.01em}
+.card p{font-size:14px;line-height:1.55;color:#4b5563;margin:0 0 14px}
+.price{display:inline-block;font-size:13px;font-weight:600;color:#f97316;background:#fff7ed;padding:5px 10px;border-radius:999px}
+.kw{font-size:11px;color:#9ca3af;font-weight:500;margin-top:8px;display:block}
+
+/* ===== CALLOUTS ===== */
+body{margin:0;padding:28px;background:#fff;font-family:Inter,system-ui;color:#333;display:flex;flex-direction:column;gap:18px}
+.callout{background:#fffbec;border-left:4px solid #f97316;padding:16px 22px;border-radius:0 8px 8px 0;font-size:15px;line-height:1.55;display:flex;gap:14px;align-items:flex-start}
+.callout svg{width:22px;height:22px;color:#f97316;flex-shrink:0;margin-top:2px}
+.callout strong{color:#9a3412;display:block;margin-bottom:2px;font-weight:700}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:600;font-family:Inter,system-ui}
+.badge svg{width:13px;height:13px}
+.b-blue{background:#eff6ff;color:#1d4ed8}
+.b-orange{background:#fff7ed;color:#c2410c}
+.b-green{background:#dcfce7;color:#15803d}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+
+/* ===== PRICING ===== */
+body{margin:0;padding:28px;background:#f9fafb;font-family:Inter,system-ui;color:#333}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tier{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:24px;position:relative}
+.tier.feat{border:2px solid #2563eb;box-shadow:0 12px 28px rgba(37,99,235,.12)}
+.tag{position:absolute;top:-10px;left:24px;background:#f97316;color:#fff;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.tier h3{font-size:16px;color:#6b7280;font-weight:600;margin:0 0 8px;text-transform:uppercase;letter-spacing:.06em}
+.price{font-size:36px;font-weight:800;color:#2563eb;letter-spacing:-.02em;line-height:1}
+.price small{font-size:14px;color:#6b7280;font-weight:500;margin-left:4px}
+.tier ul{padding:0;margin:18px 0 20px;list-style:none;font-size:14px;line-height:1.7;color:#4b5563}
+.tier li{display:flex;gap:8px;align-items:flex-start}
+.tier li svg{width:16px;height:16px;color:#16a34a;flex-shrink:0;margin-top:4px}
+.btn{display:block;text-align:center;padding:11px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none}
+.btn-o{background:#f97316;color:#fff}
+.btn-g{background:#fff;color:#2563eb;border:1.5px solid #2563eb}
+
+/* ===== TESTIMONIAL ===== */
+body{margin:0;padding:28px;background:#fff;font-family:Inter,system-ui;color:#333}
+.t{background:#f9fafb;border-radius:14px;padding:26px;border:1px solid #e5e7eb;display:flex;gap:18px;align-items:flex-start}
+.q{width:36px;height:36px;flex-shrink:0;color:#f97316}
+.q svg{width:36px;height:36px}
+.t blockquote{margin:0;font-size:18px;line-height:1.5;color:#1f2937;font-weight:500;font-style:italic}
+.author{margin-top:14px;display:flex;align-items:center;gap:10px;font-size:14px}
+.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.author strong{color:#111827}
+.author span{color:#6b7280}
+.stars{color:#f97316;font-size:13px;letter-spacing:1px;margin-top:8px}
+
+/* ===== BUTTONS ===== */
+body{margin:0;padding:28px;background:#fff;font-family:Inter,system-ui;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;border:0;cursor:pointer;transition:all .2s cubic-bezier(.22,1,.36,1);font-family:inherit}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:#f97316;color:#fff;box-shadow:0 4px 12px rgba(249,115,22,.2)}
+.btn-primary:hover{background:#ea580c;transform:translateY(-1px);box-shadow:0 8px 24px rgba(249,115,22,.25)}
+.btn-secondary{background:#2563eb;color:#fff;box-shadow:0 4px 12px rgba(37,99,235,.18)}
+.btn-secondary:hover{background:#1d4ed8;transform:translateY(-1px)}
+.btn-ghost{background:#fff;color:#2563eb;border:1.5px solid #2563eb}
+.btn-ghost:hover{background:#eff6ff}
+.btn-link{background:transparent;color:#f97316;padding:8px 0}
+.btn-link:hover{color:#ea580c;text-decoration:underline}
+.btn-sm{padding:8px 14px;font-size:13px}
+.btn-lg{padding:14px 28px;font-size:17px}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.lbl{font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.08em}
+
+/* ===== ADDITIONAL LAYOUT ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 40px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 28px;
+  color: var(--color-accent);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-tight);
+}
+
+footer {
+  border-top: 1px solid var(--color-border);
+  padding: 30px 20px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-fg-muted);
+}
+
+footer a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Trust badges in hero */
+.trust {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 28px;
+  font-size: 13px;
+  opacity: 0.85;
+  flex-wrap: wrap;
+}
+
+.trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trust svg {
+  width: 16px;
+  height: 16px;
+}
