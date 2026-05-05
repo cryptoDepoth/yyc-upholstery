@@ -28,6 +28,9 @@ wrangler pages deploy public --project-name yycupholstery-site
 - [SEO Roadmap](../Obsidian-Vault/Business/YYC-Uphulstery/SEO-roadmap.md)
 - [GBP CSV](../Obsidian-Vault/Business/YYC-Uphulstery/SEO/gbp-import.csv)
 
+## 🔗 GitHub Repo
+**Repository:** https://github.com/cryptoDepoth/yyc-upholstery
+
 ---
 
 *Last Updated: 2026-05-04*
