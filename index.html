@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YYC Upholstery – Mobile Upholstery & Mattress Cleaning</title>
-  <meta name="description" content="Professional mobile upholstery, mattress, leather & pet‑stain cleaning in Calgary and surrounding areas. Same‑day service, eco‑friendly solutions, no trip fees.">
+  <meta name="description" content="Professional mobile upholstery, mattress, leather & pet-stain cleaning in Calgary and surrounding areas. Same-day service, eco-friendly solutions, no trip fees.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+
+/* ===== DESIGN TOKENS ===== */
 /* =====================================================
    YYC Upholstery — Design Tokens
    Colors, type, spacing, radii, shadows.
@@ -225,37 +227,8 @@ code, kbd, samp { font-family: var(--font-mono); font-size: 0.95em; }
   color: var(--color-accent);
 }
 
-  </style>
-</head>
-<body>
-  <header style="text-align:center;padding:24px;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="360" height="80">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#2563eb"></stop>
-      <stop offset="100%" stop-color="#1d4ed8"></stop>
-    </linearGradient>
-  </defs>
-  <g transform="translate(8,12)">
-    <rect width="56" height="56" rx="14" fill="url(#g)"></rect>
-    <g transform="translate(14,14)" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M2 16v-3a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v3"></path>
-      <path d="M28 16v-3a3 3 0 0 0-3-3h0a3 3 0 0 0-3 3v3"></path>
-      <path d="M2 16h26v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-6z"></path>
-      <path d="M8 13a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3H8z"></path>
-      <path d="M5 25v3M25 25v3"></path>
-    </g>
-  </g>
-  <g transform="translate(80,0)" font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif">
-    <text x="0" y="38" font-size="30" font-weight="800" fill="#2563eb" letter-spacing="-0.8">YYC</text>
-    <text x="74" y="38" font-size="30" font-weight="500" fill="#333333" letter-spacing="-0.4">Upholstery</text>
-    <text x="0" y="62" font-size="11" font-weight="600" fill="#f97316" letter-spacing="2.4">CALGARY · MOBILE · SAME-DAY</text>
-  </g>
-</svg>
-    <h1 style="margin:12px 0;color:var(--color-primary);font-size:2.2rem;">YYC Upholstery</h1>
-    <p style="font-size:1.1rem;color:var(--text);margin-bottom:0;">Calgary’s Trusted Mobile Upholstery & Mattress Cleaning</p>
-  </header>
-  <!doctype html><html><head><meta charset="utf-8"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
+
+/* ===== HERO ===== */
 body{margin:0;padding:24px;background:#fff;font-family:Inter,system-ui;color:#333}
 .hero{background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);color:#fff;border-radius:16px;padding:48px 36px;text-align:center}
 .eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fdba74;margin-bottom:14px}
@@ -270,8 +243,115 @@ body{margin:0;padding:24px;background:#fff;font-family:Inter,system-ui;color:#33
 .trust{display:flex;justify-content:center;gap:24px;margin-top:28px;font-size:13px;opacity:.85;flex-wrap:wrap}
 .trust span{display:inline-flex;align-items:center;gap:6px}
 .trust svg{width:16px;height:16px}
-</style></head><body>
-<div class="hero">
+
+/* ===== SERVICE CARDS ===== */
+body{margin:0;padding:28px;background:#f9fafb;font-family:Inter,system-ui;color:#333}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:24px;box-shadow:0 1px 3px rgba(15,23,42,.08),0 1px 2px rgba(15,23,42,.04);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(15,23,42,.10)}
+.icon{width:44px;height:44px;border-radius:10px;background:#eff6ff;color:#2563eb;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.icon svg{width:24px;height:24px}
+.card h3{font-size:18px;font-weight:700;margin:0 0 6px;color:#111827;letter-spacing:-.01em}
+.card p{font-size:14px;line-height:1.55;color:#4b5563;margin:0 0 14px}
+.price{display:inline-block;font-size:13px;font-weight:600;color:#f97316;background:#fff7ed;padding:5px 10px;border-radius:999px}
+.kw{font-size:11px;color:#9ca3af;font-weight:500;margin-top:8px;display:block}
+
+/* ===== CALLOUTS & BADGES ===== */
+body{margin:0;padding:28px;background:#fff;font-family:Inter,system-ui;color:#333;display:flex;flex-direction:column;gap:18px}
+.callout{background:#fffbec;border-left:4px solid #f97316;padding:16px 22px;border-radius:0 8px 8px 0;font-size:15px;line-height:1.55;display:flex;gap:14px;align-items:flex-start}
+.callout svg{width:22px;height:22px;color:#f97316;flex-shrink:0;margin-top:2px}
+.callout strong{color:#9a3412;display:block;margin-bottom:2px;font-weight:700}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:600;font-family:Inter,system-ui}
+.badge svg{width:13px;height:13px}
+.b-blue{background:#eff6ff;color:#1d4ed8}
+.b-orange{background:#fff7ed;color:#c2410c}
+.b-green{background:#dcfce7;color:#15803d}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+
+/* ===== PRICING ===== */
+body{margin:0;padding:28px;background:#f9fafb;font-family:Inter,system-ui;color:#333}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tier{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:24px;position:relative}
+.tier.feat{border:2px solid #2563eb;box-shadow:0 12px 28px rgba(37,99,235,.12)}
+.tag{position:absolute;top:-10px;left:24px;background:#f97316;color:#fff;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.tier h3{font-size:16px;color:#6b7280;font-weight:600;margin:0 0 8px;text-transform:uppercase;letter-spacing:.06em}
+.price{font-size:36px;font-weight:800;color:#2563eb;letter-spacing:-.02em;line-height:1}
+.price small{font-size:14px;color:#6b7280;font-weight:500;margin-left:4px}
+.tier ul{padding:0;margin:18px 0 20px;list-style:none;font-size:14px;line-height:1.7;color:#4b5563}
+.tier li{display:flex;gap:8px;align-items:flex-start}
+.tier li svg{width:16px;height:16px;color:#16a34a;flex-shrink:0;margin-top:4px}
+.btn{display:block;text-align:center;padding:11px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none}
+.btn-o{background:#f97316;color:#fff}
+.btn-g{background:#fff;color:#2563eb;border:1.5px solid #2563eb}
+
+/* ===== TESTIMONIALS ===== */
+body{margin:0;padding:28px;background:#fff;font-family:Inter,system-ui;color:#333}
+.t{background:#f9fafb;border-radius:14px;padding:26px;border:1px solid #e5e7eb;display:flex;gap:18px;align-items:flex-start}
+.q{width:36px;height:36px;flex-shrink:0;color:#f97316}
+.q svg{width:36px;height:36px}
+.t blockquote{margin:0;font-size:18px;line-height:1.5;color:#1f2937;font-weight:500;font-style:italic}
+.author{margin-top:14px;display:flex;align-items:center;gap:10px;font-size:14px}
+.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.author strong{color:#111827}
+.author span{color:#6b7280}
+.stars{color:#f97316;font-size:13px;letter-spacing:1px;margin-top:8px}
+
+/* ===== BUTTONS ===== */
+body{margin:0;padding:28px;background:#fff;font-family:Inter,system-ui;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;border:0;cursor:pointer;transition:all .2s cubic-bezier(.22,1,.36,1);font-family:inherit}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:#f97316;color:#fff;box-shadow:0 4px 12px rgba(249,115,22,.2)}
+.btn-primary:hover{background:#ea580c;transform:translateY(-1px);box-shadow:0 8px 24px rgba(249,115,22,.25)}
+.btn-secondary{background:#2563eb;color:#fff;box-shadow:0 4px 12px rgba(37,99,235,.18)}
+.btn-secondary:hover{background:#1d4ed8;transform:translateY(-1px)}
+.btn-ghost{background:#fff;color:#2563eb;border:1.5px solid #2563eb}
+.btn-ghost:hover{background:#eff6ff}
+.btn-link{background:transparent;color:#f97316;padding:8px 0}
+.btn-link:hover{color:#ea580c;text-decoration:underline}
+.btn-sm{padding:8px 14px;font-size:13px}
+.btn-lg{padding:14px 28px;font-size:17px}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.lbl{font-size:11px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.08em}
+
+/* ===== GLOBAL LAYOUT ===== */
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 40px 0;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--color-accent);
+}
+
+footer {
+  border-top: 1px solid var(--color-border);
+  padding: 30px 0;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-fg-muted);
+}
+
+footer a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+  </style>
+</head>
+<body style="margin:0;padding:0;">
+  
+  <!-- HERO SECTION -->
+  <section style="padding:0;">
+    <div class="hero">
   <div class="eyebrow">Calgary · Mobile · Same-Day</div>
   <h1>Calgary's Trusted Upholstery &amp; Mattress Cleaning</h1>
   <p>We come to you. Eco-friendly solutions, 24-hour drying, no trip fees.</p>
@@ -285,22 +365,29 @@ body{margin:0;padding:24px;background:#fff;font-family:Inter,system-ui;color:#33
     <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Mobile Service</span>
   </div>
 </div>
-</body></html>
-  <section style="padding:24px 0;max-width:900px;margin:auto;">
-    <h2 class="eyebrow" style="text-align:center;color:var(--color-accent);">Our Services</h2>
-    <!doctype html><html><head><meta charset="utf-8"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
-body{margin:0;padding:28px;background:#f9fafb;font-family:Inter,system-ui;color:#333}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:24px;box-shadow:0 1px 3px rgba(15,23,42,.08),0 1px 2px rgba(15,23,42,.04);transition:transform .2s,box-shadow .2s}
-.card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(15,23,42,.10)}
-.icon{width:44px;height:44px;border-radius:10px;background:#eff6ff;color:#2563eb;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-.icon svg{width:24px;height:24px}
-.card h3{font-size:18px;font-weight:700;margin:0 0 6px;color:#111827;letter-spacing:-.01em}
-.card p{font-size:14px;line-height:1.55;color:#4b5563;margin:0 0 14px}
-.price{display:inline-block;font-size:13px;font-weight:600;color:#f97316;background:#fff7ed;padding:5px 10px;border-radius:999px}
-.kw{font-size:11px;color:#9ca3af;font-weight:500;margin-top:8px;display:block}
-</style></head><body>
-<div class="grid">
+  </section>
+  
+  <div class="page-container">
+    
+    <!-- CALLOUTS & BADGES -->
+    <section>
+      <div class="callout">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+  <div><strong>Same-Day Service Available</strong>Book before 10am for same-day upholstery cleaning in most Calgary neighborhoods.</div>
+</div>
+<div class="row">
+  <span class="badge b-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Eco-Friendly</span>
+  <span class="badge b-orange">Same-Day</span>
+  <span class="badge b-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19.2 2.96a1 1 0 0 1 1.6.8c0 8.7-3.83 12.24-9.8 12.24"/></svg>Pet-Safe</span>
+  <span class="badge b-blue">Mobile Service</span>
+  <span class="badge b-orange">No Trip Fees</span>
+</div>
+    </section>
+    
+    <!-- SERVICE CARDS -->
+    <section>
+      <h2>Our Services</h2>
+      <div class="grid">
   <div class="card">
     <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H6v-2a2 2 0 0 0-4 0Z"/><path d="M4 18v2"/><path d="M20 18v2"/></svg></div>
     <h3>Sofa &amp; Couch Cleaning</h3>
@@ -323,53 +410,12 @@ body{margin:0;padding:28px;background:#f9fafb;font-family:Inter,system-ui;color:
     <span class="kw">pet stain removal calgary</span>
   </div>
 </div>
-</body></html>
-  </section>
-  <section style="padding:24px 0;background:#fffbec;max-width:900px;margin:auto;">
-    <!doctype html><html><head><meta charset="utf-8"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
-body{margin:0;padding:28px;background:#fff;font-family:Inter,system-ui;color:#333;display:flex;flex-direction:column;gap:18px}
-.callout{background:#fffbec;border-left:4px solid #f97316;padding:16px 22px;border-radius:0 8px 8px 0;font-size:15px;line-height:1.55;display:flex;gap:14px;align-items:flex-start}
-.callout svg{width:22px;height:22px;color:#f97316;flex-shrink:0;margin-top:2px}
-.callout strong{color:#9a3412;display:block;margin-bottom:2px;font-weight:700}
-.badge{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:600;font-family:Inter,system-ui}
-.badge svg{width:13px;height:13px}
-.b-blue{background:#eff6ff;color:#1d4ed8}
-.b-orange{background:#fff7ed;color:#c2410c}
-.b-green{background:#dcfce7;color:#15803d}
-.row{display:flex;gap:8px;flex-wrap:wrap}
-</style></head><body>
-<div class="callout">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-  <div><strong>Same-Day Service Available</strong>Book before 10am for same-day upholstery cleaning in most Calgary neighborhoods.</div>
-</div>
-<div class="row">
-  <span class="badge b-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Eco-Friendly</span>
-  <span class="badge b-orange">Same-Day</span>
-  <span class="badge b-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19.2 2.96a1 1 0 0 1 1.6.8c0 8.7-3.83 12.24-9.8 12.24"/></svg>Pet-Safe</span>
-  <span class="badge b-blue">Mobile Service</span>
-  <span class="badge b-orange">No Trip Fees</span>
-</div>
-</body></html>
-  </section>
-  <section style="padding:24px 0;max-width:900px;margin:auto;">
-    <h2 class="eyebrow" style="text-align:center;color:var(--color-accent);">Pricing</h2>
-    <!doctype html><html><head><meta charset="utf-8"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
-body{margin:0;padding:28px;background:#f9fafb;font-family:Inter,system-ui;color:#333}
-.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.tier{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:24px;position:relative}
-.tier.feat{border:2px solid #2563eb;box-shadow:0 12px 28px rgba(37,99,235,.12)}
-.tag{position:absolute;top:-10px;left:24px;background:#f97316;color:#fff;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-.tier h3{font-size:16px;color:#6b7280;font-weight:600;margin:0 0 8px;text-transform:uppercase;letter-spacing:.06em}
-.price{font-size:36px;font-weight:800;color:#2563eb;letter-spacing:-.02em;line-height:1}
-.price small{font-size:14px;color:#6b7280;font-weight:500;margin-left:4px}
-.tier ul{padding:0;margin:18px 0 20px;list-style:none;font-size:14px;line-height:1.7;color:#4b5563}
-.tier li{display:flex;gap:8px;align-items:flex-start}
-.tier li svg{width:16px;height:16px;color:#16a34a;flex-shrink:0;margin-top:4px}
-.btn{display:block;text-align:center;padding:11px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none}
-.btn-o{background:#f97316;color:#fff}
-.btn-g{background:#fff;color:#2563eb;border:1.5px solid #2563eb}
-</style></head><body>
-<div class="tiers">
+    </section>
+    
+    <!-- PRICING TIERS -->
+    <section>
+      <h2>Pricing</h2>
+      <div class="tiers">
   <div class="tier">
     <h3>Single Item</h3>
     <div class="price">$89<small>/start</small></div>
@@ -403,23 +449,12 @@ body{margin:0;padding:28px;background:#f9fafb;font-family:Inter,system-ui;color:
     <a class="btn btn-g">Book Combo</a>
   </div>
 </div>
-</body></html>
-  </section>
-  <section style="padding:24px 0;max-width:900px;margin:auto;">
-    <h2 class="eyebrow" style="text-align:center;color:var(--color-accent);">What Our Clients Say</h2>
-    <!doctype html><html><head><meta charset="utf-8"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
-body{margin:0;padding:28px;background:#fff;font-family:Inter,system-ui;color:#333}
-.t{background:#f9fafb;border-radius:14px;padding:26px;border:1px solid #e5e7eb;display:flex;gap:18px;align-items:flex-start}
-.q{width:36px;height:36px;flex-shrink:0;color:#f97316}
-.q svg{width:36px;height:36px}
-.t blockquote{margin:0;font-size:18px;line-height:1.5;color:#1f2937;font-weight:500;font-style:italic}
-.author{margin-top:14px;display:flex;align-items:center;gap:10px;font-size:14px}
-.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
-.author strong{color:#111827}
-.author span{color:#6b7280}
-.stars{color:#f97316;font-size:13px;letter-spacing:1px;margin-top:8px}
-</style></head><body>
-<div class="t">
+    </section>
+    
+    <!-- TESTIMONIALS -->
+    <section>
+      <h2>What Our Clients Say</h2>
+      <div class="t">
   <div class="q"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2zM5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg></div>
   <div>
     <blockquote>YYC Upholstery came to our home in Eagle Ridge and cleaned our sofa in just a few hours. Best service!</blockquote>
@@ -427,11 +462,15 @@ body{margin:0;padding:28px;background:#fff;font-family:Inter,system-ui;color:#33
     <div class="author"><div class="avatar">ST</div><div><strong>Sarah T.</strong> · <span>Airdrie · Eagle Ridge</span></div></div>
   </div>
 </div>
-</body></html>
-  </section>
-  <footer style="text-align:center;padding:24px;font-size:0.9rem;color:var(--color-fg-muted);border-top:1px solid var(--color-border);margin-top:40px;">
-    <p>© 2026 YYC Upholstery • <a href="tel:+1825288500" style="color:var(--color-primary);text-decoration:none;">(825) 288‑8500</a> • <a href="https://instagram.com/yycupholstery" style="color:var(--color-primary);text-decoration:none;">@yycupholstery</a></p>
+    </section>
+    
+  </div>
+  
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 YYC Upholstery · <a href="tel:+1825288500">(825) 288‑8500</a> · <a href="https://instagram.com/yycupholstery">@yycupholstery</a></p>
     <p>Serving Calgary, Airdrie, Cochrane, Okotoks, Chestermere.</p>
   </footer>
+  
 </body>
 </html>
